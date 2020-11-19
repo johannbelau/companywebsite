@@ -3,13 +3,13 @@
     <div class="col-lg-6 text-center align-self-center">
       <hr class="d-block d-md-none my-5 invisible">
       <h1 class="display-4 text-primary mb-3 mt-5 mt-lg-0 font-weight-bold">
-        Lorem ipsum dolor 
+        {{ site.data.hero-banner.heading }}
       </h1>
       <p class="lead">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        {{ site.data.hero-banner.sub_heading }}
       </p>
       <p class="">
-        <a href="#" class="btn btn-outline-primary btn-lg">Learn More</a>
+        <a href="{{ site.data.hero-banner.btn_link }}" class="btn btn-outline-primary btn-lg">{{ site.data.hero-banner.btn_text }}</a>
       </p>
       <hr class="d-block d-md-none my-5 invisible">
     </div>

@@ -28,3 +28,8 @@ keep_files:
   - _site/js
 
 include: ['_pages']
+
+languages: ["de", "en"]
+default_lang: "de"
+exclude_from_localization: ["js", "fonts", "styles"]
+parallel_localization: true
