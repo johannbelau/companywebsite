@@ -1,4 +1,5 @@
 # Site settings
+name: 4RIVERS
 title: Your awesome title
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
