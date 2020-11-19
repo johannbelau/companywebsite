@@ -26,4 +26,4 @@ and Browser-sync +
 
 *Option with force livereload browser `bundle exec jekyll serve --livereload`*
 
-in browser got to `http://127.0.0.1:4000/admin/`
+in browser go to `http://127.0.0.1:4000/admin/`
