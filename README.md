@@ -19,5 +19,11 @@ and Browser-sync +
 1. Clone or download this respository.
 2. Run `npm install`
 3. Run `bundle install`
-4. Run `gulp` to bundle assets and generate website into *_site* folder
 
+## Running
+* **For Development** Run `gulp` to bundle assets and generate website into *_site* folder
+* **For Editing** should be using `bundle exec jekyll serve` to run server and 
+
+*Option with force livereload browser `bundle exec jekyll serve --livereload`*
+
+in browser got to `http://127.0.0.1:4000/admin/`
