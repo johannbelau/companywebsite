@@ -1,0 +1,32 @@
+<section class="pb-7 bg-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12">
+        <h2 class="font-weight-bold">
+          Projects ipsum dolor sit
+        </h2>
+        <p class="lead">
+          Dolor sit, amet consectetur adipisicing elit. Sit beatae optio iste repellat aut sapiente.
+        </p>
+      </div>
+    </div>
+      
+    <div class="row flex-wrap justify-content-around align-content-center mt-4">
+      {% for item in (1..3) %}
+      <div class="col-auto col-lg-3 text-center" >
+        <p class="lead">Lorem, ipsum.</p>
+        <div class="embed-responsive embed-responsive-1by1 mx-auto" style="width: 12rem;">
+          <div class="embed-responsive-item rounded-circle bg-primary">
+            <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+              <p class="display-4 text-white font-weight-bold">{{ item }}</p>
+            </div>
+          </div>
+        </div>
+        <p class="lead text-uppercase font-weight-bold mt-3">
+          Lorem, ipsum dolor.
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<footer class="bg-nr">
+
+  <div class="pt-8 pb-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-auto">
+          <img src="/img/4Rivers_Logo.svg" alt="" width="128">
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          
+  
+          <p class="lead font-weight-bold">Contact</p>
+          <p class="mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="mb-0">Name Lastname</p>
+          <p class="mb-0">Adress Lorem, ipsum dolor.</p>
+          <p class="mb-0">Adress2 Lorem, ipsum dolor.</p>
+          <p class="mb-0">Telephone Lorem, ipsum dolor.</p>
+          <p class="mb-0">Email Lorem, ipsum dolor.</p>
+        </div>
+        <div class="col-md-3 offset-md-1">
+          <p class="lead font-weight-bold">
+            Legal
+          </p>
+          <ul class="list-unstyled">
+            <li><a href="$">Cookies</a></li>
+            <li><a href="$">Imprint</a></li>
+            <li><a href="$">Imprint</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 offset-md-1">
+          
+        </div>
+      </div>
+      <hr class="mt-4 border-primary mb-4">
+      <div class="row justify-content-between">
+          <div class="col-lg-4">
+          
+          <span class="text-muted small ml-2">©2020 4RIVERS · Lorem, ipsum dolor · Lorem, ipsum</span>
+          </div>
+          <div class="col-lg-2 d-flex justify-content-between col-6 mt-3 mt-md-0">
+            {% for item in site.data.social-items %}
+            <a href="{{ item.url }}" class="social-link">
+              <img src="{{ item.icon }}" alt="{{ item.name }}">
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+  </div>
+</footer>
