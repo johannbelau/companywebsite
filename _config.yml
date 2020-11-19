@@ -21,6 +21,7 @@ exclude:
   - gulpfile.js
   - README.md
   - .jekyll-cache
+  - bootstrap-vars.scss
 
 keep_files:
   - _site/css

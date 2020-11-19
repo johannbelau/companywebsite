@@ -3,3 +3,4 @@
 .jekyll-cache
 bootstrap-vars.scss
 .DS_Store
+css/vars/project-vars.css
