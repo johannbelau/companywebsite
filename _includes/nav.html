@@ -3,12 +3,12 @@
     <a class="navbar-brand" href="#">
       <img src="/img/4Rivers_Logo.svg" width="160" height="48" class="d-inline-block align-top" alt="" loading="lazy">
     </a>
-    <ul class="navbar-nav mr-0 justify-content-md-between main-nav">
+    <ul class="navbar-nav mr-0 justify-content-md-between main-nav flex-row">
       <li class="nav-item">
-        <a class="nav-link {% if site.active_lang == 'en' %}bg-primary text-white{% endif %} rounded-lg" href="/{{ site.languages[1] }}/">en</a>
+        <a class="px-2 py-1 nav-link {% if site.active_lang == 'en' %}bg-primary text-white{% endif %} rounded-lg" href="/{{ site.languages[1] }}/">en</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {% if site.active_lang == site.default_lang %}bg-primary text-white{% endif %} rounded-lg" href=" /">de</a>
+        <a class="px-2 py-1 nav-link {% if site.active_lang == site.default_lang %}bg-primary text-white{% endif %} rounded-lg" href=" /">de</a>
       </li> 
     </ul>
   </div>
