@@ -4,30 +4,29 @@
     <div class="container">
       <div class="row mb-4">
         <div class="col-auto">
-          <img src="/img/4Rivers_Logo.svg" alt="" width="128">
-          
+          <img src="/img/4Rivers_Logo.svg" alt="4 Rivers GmbH Logo" width="128">
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3">
-          
-  
-          <p class="lead font-weight-bold">Contact</p>
-          <p class="mb-0">Lorem ipsum dolor sit amet consectetur.</p>
-          <p class="mb-0">Name Lastname</p>
-          <p class="mb-0">Adress Lorem, ipsum dolor.</p>
-          <p class="mb-0">Adress2 Lorem, ipsum dolor.</p>
-          <p class="mb-0">Telephone Lorem, ipsum dolor.</p>
-          <p class="mb-0">Email Lorem, ipsum dolor.</p>
+        <div class="col-md-4">
+          <p class="font-weight-bold h5">Contact</p>
+          <p class="mb-0 font-weight-bold">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="mb-0">{{ site.name}}</p>
+          <p class="mb-0">{{ site.owner_name}}</p>
+          {% for line in site.address %}
+          <p class="mb-0">{{ line }}</p>
+          {% endfor %}
+          <p class="mb-0">{{ site.email }}</p>
+          <p class="mb-0">{{ site.telephone }}</p>
         </div>
         <div class="col-md-3 offset-md-1">
-          <p class="lead font-weight-bold">
+          <p class="font-weight-bold h5">
             Legal
           </p>
           <ul class="list-unstyled">
-            <li><a href="$">Cookies</a></li>
-            <li><a href="$">Imprint</a></li>
-            <li><a href="$">Imprint</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Imprint</a></li>
+            <li><a href="#">Imprint</a></li>
           </ul>
         </div>
         <div class="col-md-3 offset-md-1">

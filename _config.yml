@@ -1,5 +1,5 @@
 # Site settings
-name: 4RIVERS
+name: 4 Rivers GmbH
 title: Your awesome title
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -10,6 +10,14 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+
+owner_name: Johann Belau
+address:
+  - Mainz, Germany
+  - Street Nr
+  - "02034"
+
+telephone: +49 (0) 1234 567 89 10
 
 # Build settings
 markdown: kramdown
