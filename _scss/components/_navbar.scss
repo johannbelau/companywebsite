@@ -5,8 +5,16 @@
     background-color: #fff;
     box-shadow: 6px 3px 12px rgba(68, 68, 68, 0.05)
   }
-
+  
   @include media-breakpoint-down(lg) { 
     background-color: #fff;
   }
+}
+
+.logo {
+  transition: all 250ms ease-in-out;
+  .nav-bg-white & {
+    width: 128px;
+  }
+
 }
