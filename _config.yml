@@ -38,5 +38,5 @@ include: ['_pages']
 
 languages: ["de", "en"]
 default_lang: "de"
-exclude_from_localization: ["js", "fonts", "styles"]
+exclude_from_localization: ["js", "fonts", "styles", "img"]
 parallel_localization: true
