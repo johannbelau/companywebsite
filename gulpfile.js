@@ -24,7 +24,7 @@ gulp.task('purgecss', () => {
         whitelist: ['nav-bg-white']
     }))
     .pipe(gulpcssnano())
-    .pipe(gulp.dest('_includes/css/home.css'))
+    .pipe(gulp.dest('_includes/css/'))
 })
 
 var paths = {
