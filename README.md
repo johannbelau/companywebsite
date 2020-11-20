@@ -17,13 +17,13 @@ and Browser-sync +
 
 ## Installation
 1. Clone or download this respository.
-2. Run `npm install`
-3. Run `bundle install`
+2. Run `npm install` * *this step is optional if you update content only: images/text/data files*
+3. Run `bundle install` * required for Jekyll
 
 ## Running
-* **For Development** Run `gulp` to bundle assets and generate website into *_site* folder
-* **For Editing** should be using `bundle exec jekyll serve` to run server and 
-
-*Option with force livereload browser `bundle exec jekyll serve --livereload`*
+* **For Development** Run `gulp` to bundle assets (js/styles) and generate website into *_site* folder
+* **For Editing** should be using `bundle exec jekyll serve` to run server or *Option with force livereload browser `bundle exec jekyll serve --livereload`*
 
 in browser go to `http://127.0.0.1:4000/admin/`
+
+*Dev Note:* Check gulpfile.js for automated tasks, like `gulp purgecss` to udpate critical css
