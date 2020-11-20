@@ -1,21 +1,20 @@
 # Site settings
 name: 4 Rivers GmbH
 title: Your awesome title
-email: your-email@domain.com
+email: info@4rivers.de
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://www.4rivers.de" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
 owner_name: Johann Belau
 address:
-  - Mainz, Germany
-  - Street Nr
-  - "02034"
+  - Forsterstr. 37a
+  - 55118 Mainz
 
 telephone: +49 (0) 1234 567 89 10
 
