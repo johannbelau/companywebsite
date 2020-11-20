@@ -13,8 +13,12 @@ github_username:  jekyll
 
 owner_name: Johann Belau
 address:
-  - Forsterstr. 37a
-  - 55118 Mainz
+  de:
+    - Forsterstr. 37a
+    - 55118 Mainz
+  en: 
+    - Forsterstr. 37a
+    - 55118 Mainz
 
 telephone: +49 (0) 1234 567 89 10
 

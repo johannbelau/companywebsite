@@ -13,7 +13,7 @@
           <p class="mb-0 font-weight-bold">Lorem ipsum dolor sit amet consectetur.</p>
           <p class="mb-0">{{ site.name}}</p>
           <p class="mb-0">{{ site.owner_name}}</p>
-          {% for line in site.address %}
+          {% for line in site.address.[page.lang] %}
           <p class="mb-0">{{ line }}</p>
           {% endfor %}
           <p class="mb-0">{{ site.email }}</p>
