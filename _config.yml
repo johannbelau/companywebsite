@@ -20,6 +20,10 @@ address:
     - Forsterstr. 37a
     - 55118 Mainz
 
+copyright_text:
+  de: "4RIVERS · Versionen des Lorem · Versionen des"
+  en: "4RIVERS · Lorem, ipsum dolor · Lorem, ipsum"    
+
 telephone: +49 (0) 1234 567 89 10
 
 # Build settings

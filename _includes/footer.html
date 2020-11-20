@@ -1,5 +1,4 @@
-<footer class="bg-nr">
-
+<footer>
   <div class="pt-8 pb-5">
     <div class="container">
       <div class="row mb-4">
@@ -36,8 +35,7 @@
       <hr class="mt-4 border-primary mb-4">
       <div class="row justify-content-between">
           <div class="col-lg-4">
-          
-          <span class="text-muted small ml-2">©20{{ site.time | date: '%y' }} 4RIVERS · Lorem, ipsum dolor · Lorem, ipsum</span>
+            <span class="text-muted small ml-2">©20{{ site.time | date: '%y' }} {{ site.copyright_text.[page.lang]}}</span>
           </div>
           <div class="col-lg-2 d-flex justify-content-between col-6 mt-3 mt-md-0">
             {% for item in site.data.social-items %}
