@@ -10900,6 +10900,7 @@ svg {
 }
 
 /* Components */
+/* purgecss start ignore */
 .navbar {
   transition: background-color 250ms ease-in-out;
 }
@@ -10923,6 +10924,7 @@ svg {
   width: 128px;
 }
 
+/* purgecss end ignore */
 /* Typography */
 .font-alt {
   font-family: 'Oswald', sans-serif;
