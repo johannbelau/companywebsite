@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cssnano = require('cssnano');
+var gulpcssnano = require('gulp-cssnano');
 var autoprefixer = require('autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
@@ -13,6 +14,18 @@ const shell = require('gulp-shell');
 var source = require('vinyl-source-stream');
 var concatjs = require('gulp-concat');
 var browserSync = require('browser-sync').create();
+
+const purgecss = require('gulp-purgecss');
+
+gulp.task('purgecss', () => {
+  return gulp.src('css/main.css')
+    .pipe(purgecss({
+        content: ['_site/index.html'],
+        whitelist: ['nav-bg-white']
+    }))
+    .pipe(gulpcssnano())
+    .pipe(gulp.dest('_includes/css/home.css'))
+})
 
 var paths = {
   styles: {
