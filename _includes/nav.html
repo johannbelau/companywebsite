@@ -5,10 +5,10 @@
     </a>
     <ul class="navbar-nav mr-0 justify-content-md-between main-nav flex-row">
       <li class="nav-item">
-        <a class="px-2 py-1 nav-link {% if site.active_lang == 'en' %}bg-primary text-white{% else %} text-primary {% endif %} rounded-lg" href="/{{ site.languages[1] }}/">en</a>
+        <a class="px-2 py-1 nav-link {% if page.lang == 'en' %}bg-primary text-white{% else %} text-primary {% endif %} rounded-lg" href="/en">en</a>
       </li>
       <li class="nav-item">
-        <a class="px-2 py-1 nav-link {% if site.active_lang == site.default_lang %}bg-primary text-white{% else %} text-primary{% endif %} rounded-lg" href=" /">de</a>
+        <a class="px-2 py-1 nav-link {% if page.lang == 'de' %}bg-primary text-white{% else %} text-primary{% endif %} rounded-lg" href="/">de</a>
       </li> 
     </ul>
   </div>
