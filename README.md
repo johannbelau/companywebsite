@@ -4,7 +4,7 @@ the new company website of "4 Rivers GmbH"
 
 # Jekyll Bootstrap 4.5.2
 
-[deploys from Github to Github pages]()
+[deploys from Github to Github pages](https://johannbelau.github.io/companywebsite/)
 
 Jekyll + Gulp 4 + Bootstrap 4
 and Browser-sync + 
