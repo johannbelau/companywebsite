@@ -40,7 +40,7 @@
           <div class="col-lg-2 d-flex justify-content-between col-6 mt-3 mt-md-0">
             {% for item in site.data.social-items %}
             <a href="{{ item.url }}" class="social-link">
-              <img src="{{ item.icon }}" alt="{{ item.name }}" width="16" height="16">
+              <img src="{{ item.icon | relative_url }}" alt="{{ item.name }}" width="16" height="16">
             </a>
             {% endfor %}
           </div>
