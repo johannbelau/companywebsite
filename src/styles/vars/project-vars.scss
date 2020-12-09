@@ -1,0 +1,155 @@
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+// fusv-disable
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+// fusv-enable
+
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+
+$enable-caret:                true !default;
+$enable-rounded:              true !default;
+$enable-shadows:              true !default;
+$enable-gradients:            false !default;
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$enable-grid-classes:         true !default;
+$enable-button-pointers:      true !default;
+$enable-rfs:                  true !default;
+$enable-validation-icons:     true !default;
+$enable-negative-margins:     true !default;
+$enable-deprecation-messages: true !default;
+$enable-important-utilities:  true !default;
+
+$primary:       #0047BB; // from logo
+$primarylight:       #f1f6fe; // from logo
+$secondary:     #091133;
+// $secondary:     #5D6970;
+$success:       $green !default;
+$info:          #505F98;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         #FBFBFD;
+$dark:          #211C36; // from logo
+$headings-line-height: 1.35;
+$nav-link-font-size: 14;
+
+
+$text-muted: #5D6970;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "primarylight": $primarylight
+) !default;
+
+$border-radius:               .6rem !default;
+$border-radius-sm:            .3rem !default;
+$border-radius-lg:            .8rem !default;
+
+$gradient: linear-gradient(180deg, rgba($white, .25), rgba($white, 1));
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 8,
+) !default;
+
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$font-family-base: 'Open Sans', sans-serif;
+
+
+$navbar-brand-font-size: 26;
+
+$lead-font-size: 18px;
+
+
+$btn-border-radius:           9120px;
+$btn-border-radius-sm:        9120px;
+$btn-border-radius-lg:        9120px;
+
+
+$btn-padding-y:               5px;
+$btn-padding-x:               20px;
+// $btn-font-family:             $input-btn-font-family !default;
+$btn-font-size:               16px;
+$btn-line-height:             1.625;
+$btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
+
+$btn-padding-y-sm:            3px;
+$btn-padding-x-sm:            14px;
+$btn-font-size-sm:            12px;
+
+$btn-padding-y-lg:            8px;
+$btn-padding-x-lg:            24px;
+$btn-font-size-lg:            18px;
+
+$btn-border-width:            1px;

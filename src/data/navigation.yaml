@@ -1,0 +1,10 @@
+- title: "About Us"
+  href: '/'
+- title: "Projects"
+  href: '/projects/'
+# - title: "Our Team"
+#   href: '/team/'
+# - title: "About Us"
+#   href: '/about/'
+- title: "Contact Us"
+  href: '/#contact-us'
