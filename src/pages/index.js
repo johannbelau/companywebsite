@@ -11,6 +11,8 @@ import Events from '../components/events'
 import Partners from '../components/partners'
 import Projects from '../components/projects'
 import Feedback from '../components/feedback'
+import Contact from '../components/contact'
+import LeftRight from '../components/image-heading-text-cta'
 
 
 class RootIndex extends React.Component {
@@ -28,11 +30,13 @@ class RootIndex extends React.Component {
           
           <HomeHero></HomeHero>
           <Services></Services>
+          <LeftRight/>
           <Training/>
           <Events/>
           <Partners/>
           <Projects/>
           <Feedback/>
+          <Contact/>
       </Layout>
     )
   }

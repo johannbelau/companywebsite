@@ -2,19 +2,19 @@ import React from 'react'
 
 export default function () {
   return (
-    <section class="py-5">
-      <div class="container">
-        <div class="row">
+    <section className="py-5">
+      <div className="container">
+        <div className="row">
           
-          <div class="col-lg-4 mt-5 mt-lg-0">
-            <div class="card shadow border-0">
-              <div class="card-body text-center">
-                <p class="h3 font-weight-bold font-alt">Lorem, ipsum. #1</p>
-                <p class="lead">
+          <div className="col-lg-4 mt-5 mt-lg-0">
+            <div className="card shadow border-0">
+              <div className="card-body text-center">
+                <p className="h3 font-weight-bold font-alt">Lorem, ipsum. #1</p>
+                <p className="lead">
                   Lorem ipsum dolor sit amet consectetur adipisicing.
                 </p>
                 <p>
-                  <a href="" class="btn btn-primary btn-rounded-lg ">Learn more</a>
+                  <a href="" className="btn btn-primary btn-rounded-lg ">Learn more</a>
                 </p>
               </div>
             </div>

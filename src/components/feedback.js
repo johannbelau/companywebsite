@@ -31,7 +31,7 @@ export default function () {
               <div className="card-columns">
                 {[1,2,3,4,5,6,7,8,9,10,11].map(i => {
                   return (
-                    <div className="card shadow-sm p-3 mb-4">
+                    <div className="card shadow-sm p-3 mb-4" key={`feedback-item-${i}`}>
                       <blockquote className="blockquote mb-0 card-body">
                         <p>
                           Lorem, ipsum dolor sit amet consectetur adipisicing elit.
