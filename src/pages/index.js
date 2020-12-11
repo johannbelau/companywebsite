@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout'
 import HomeHero from '../components/hero'
-import Services from '../components/services'
+import Services from '../components/services-icons'
 import Training from '../components/training'
 import Events from '../components/events'
 import Partners from '../components/partners'
