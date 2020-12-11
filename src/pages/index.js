@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import HomeHero from '../components/hero'
 import Services from '../components/services-icons'
-import Training from '../components/training'
+import OurCompany from '../components/our-company'
 import Events from '../components/events'
 import Partners from '../components/partners'
 import Projects from '../components/projects'
@@ -30,8 +30,8 @@ class RootIndex extends React.Component {
           
           <HomeHero></HomeHero>
           <Services></Services>
+          <OurCompany/>
           <LeftRight/>
-          <Training/>
           <Events/>
           <Partners/>
           <Projects/>
