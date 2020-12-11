@@ -41,6 +41,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `img`, 'logo'),
       },
     },
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-smoothscroll`,
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
