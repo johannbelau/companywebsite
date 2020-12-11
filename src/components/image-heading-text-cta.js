@@ -21,7 +21,7 @@ export default () => {
                 heading
                 image {
                   fixed {
-                    ...GatsbyContentfulFixed_tracedSVG
+                    ...GatsbyContentfulFixed
                   }
                 }
               }
