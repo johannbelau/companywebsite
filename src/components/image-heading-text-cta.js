@@ -5,16 +5,17 @@ import Img from "gatsby-image";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-export default () => {
+export default (props) => {
+
+  const {lang} = props
   return (
     <StaticQuery
       query={graphql`
         query PageRowSectionQuery {
-          allContentfulPageRowSection(
-            filter: { parent: {}, node_locale: { eq: "en" } }
-          ) {
+          allContentfulPageRowSection {
             edges {
               node {
+                node_locale
                 bodyText {
                   json
                 }
@@ -31,11 +32,12 @@ export default () => {
       `}
       render={(data) => {
         const rows = data.allContentfulPageRowSection.edges;
+        const filtered = rows.filter(i => i.node.node_locale === lang)
 
         return (
           <section className="">
             <div className="container">
-                {rows.map((i, idx) => {
+                {filtered.map((i, idx) => {
                   if (idx % 2 === 0) {
                     return (
                       

@@ -1,16 +1,18 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-export default function () {
+export default function (props) {
+  const {lang} = props
   return (
 
     <StaticQuery 
     
       query={graphql`
         query FeaturesQuery {
-          allContentfulFeature(filter: {parent: {}, node_locale: {eq: "en"}}, sort: {order: ASC, fields: createdAt}) {
+          allContentfulFeature(sort: {order: ASC, fields: createdAt}) {
             edges {
               node {
+                node_locale
                 ctaText
                 createdAt
                 image {
@@ -28,12 +30,14 @@ export default function () {
 
       render={data => {
         const features = data.allContentfulFeature.edges
+
+        const filtered = features.filter(i => i.node.node_locale === lang)
         return (
           (
             <section className="py-5">
               <div className="container">
                 <div className="row">
-                  { features.map((i,idx) => {
+                  { filtered.map((i,idx) => {
                     return (
                       <div className="col-lg-4 col-md-4 col-sm-6 mt-5 mt-lg-0" key={`feature-${idx}`}>
                         <div className="card border-0">
@@ -61,7 +65,5 @@ export default function () {
         )
       }}
     />
-
-    
   )
 }

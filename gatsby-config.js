@@ -37,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-i18n`,
       options: {
-        langKeyDefault: 'en',
-        langKeyForNull: 'en',
+        langKeyDefault: 'de',
+        langKeyForNull: 'de',
         prefixDefault: false,
         useLangKeyLayout: false,
       },

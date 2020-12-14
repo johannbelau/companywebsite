@@ -5,7 +5,6 @@ the new company website of "4 Rivers GmbH"
 * Site generation: Gatsby
 * Deployment: Netlify
 
-
 ### Requirements
 
 To use this project you have to have a Contentful account. If you don't have one yet you can register at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
@@ -64,3 +63,16 @@ Run a production build into `./public` and publish the site to GitHub pages.
 #### `yarn run cleanup-repository`
 
 Removes all dependencies, scripts and data from the installation script.
+
+## Components
+
+* Layout '../components/layout'
+* HomeHero '../components/hero'
+* Services '../components/services-icons'
+* OurCompany '../components/our-company'
+* Events '../components/events'
+* Partners '../components/partners'
+* Projects '../components/projects'
+* Feedback '../components/feedback'
+* Contact '../components/contact-us'
+* LeftRight '../components/image-heading-text-cta'

@@ -19,15 +19,15 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         
-        <Helmet>
+      <Helmet>
           <title>{siteTitle}</title>
           <meta name="description" content={siteDescription} />
         </Helmet>
           <HomeHero/>
-          <Services lang="de"/>
-          <OurCompany lang="de"/>
-          <LeftRight lang="de"/>
-          <Contact lang="de"/>
+          <Services lang="en"/>
+          <OurCompany lang="en"/>
+          <LeftRight lang="en"/>
+          <Contact lang="en"/>
       </Layout>
     )
   }
@@ -36,7 +36,7 @@ class RootIndex extends React.Component {
 export default RootIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query ENHomeQuery {
     site {
       siteMetadata {
         title
