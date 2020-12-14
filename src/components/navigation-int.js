@@ -6,7 +6,11 @@ import appData from "../../app.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
-export default () => {
+import LanguageSelector from './language-selector'
+
+
+export default (props) => {
+  const {lang} = props
   const [isActive, setNavActive] = useState(false);
   const [isLarge, setNavbarLarge] = useState(true);
 
@@ -99,26 +103,7 @@ export default () => {
           </div>
           <div className="row d-flex justify-content-end">
             <div className="col-auto">
-              
-                <ul className="navbar-nav mr-0 justify-content-md-between main-nav flex-row">
-                  <li className="nav-item">
-                    <a
-                      className="px-2 py-1 nav-link  text-primary  rounded-lg"
-                      href="/companywebsite/en"
-                    >
-                      en
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a
-                      className="px-2 py-1 nav-link bg-primary text-white rounded-lg"
-                      href="/companywebsite/"
-                    >
-                      de
-                    </a>
-                  </li>
-                </ul>
-              
+              <LanguageSelector lang={lang} />
             </div>
           </div>
         </div>

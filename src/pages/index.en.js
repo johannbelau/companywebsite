@@ -3,6 +3,9 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 
+import Navigation from '../components/navigation-int'
+import Footer from '../components/Footer'
+
 import Layout from '../components/layout'
 import HomeHero from '../components/hero'
 import Services from '../components/services-icons'
@@ -18,16 +21,18 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        
+
       <Helmet>
           <title>{siteTitle}</title>
           <meta name="description" content={siteDescription} />
         </Helmet>
+          <Navigation lang="en"/>
           <HomeHero/>
           <Services lang="en"/>
           <OurCompany lang="en"/>
           <LeftRight lang="en"/>
           <Contact lang="en"/>
+          <Footer lang="en"/>
       </Layout>
     )
   }

@@ -1,6 +1,4 @@
 import React from 'react'
-import Navigation from './navigation-int'
-import Footer from './Footer'
 
 class Template extends React.Component {
   render() {
@@ -14,9 +12,7 @@ class Template extends React.Component {
 
     return (
       <>
-        <Navigation />
         {children}
-        <Footer />
       </>
     )
   }
