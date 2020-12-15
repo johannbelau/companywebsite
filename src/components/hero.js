@@ -1,6 +1,8 @@
 import React from 'react'
 import HeroSVG from './hero-bottom-svg'
 
+import { Link, StaticQuery, graphql } from 'gatsby'
+
 export default function () {
   return (
     <>
@@ -17,7 +19,7 @@ export default function () {
               Lorem Ipsum
             </p>
             <p className="">
-              <a href="{{ site.data.[page.lang].hero-banner.btn_link }}" className="btn btn-outline-primary btn-lg">Lorem Ipsum</a>
+              <Link to="/" className="btn btn-outline-primary btn-lg">Lorem Ipsum</Link>
             </p>
             
           </div>

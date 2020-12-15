@@ -1,0 +1,39 @@
+.slider {
+  width: 100vw;
+  height: 100vh;
+
+  @include media-breakpoint-up(lg) { 
+    height: 60vh;
+    max-height: 600px;
+  }
+}
+
+.slider-arrow {
+  top: 50%;
+  margin-top: -23px;
+  z-index: 10;
+}
+
+.slider-heading {
+  @extend .slider-arrow;
+
+  margin-top: -40px;
+}
+
+.slider-arrow--left {
+  left: 16px;
+}
+
+.slider-arrow--right {
+  right: 16px;
+}
+
+.slide {
+  opacity: 0;
+  transition: all 200ms ease;
+
+  &.active {
+    opacity: 1;
+    
+  }
+}

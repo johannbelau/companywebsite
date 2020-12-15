@@ -63,7 +63,7 @@ export default (props) => {
     };
   });
   return (
-    <nav className="navbar navbar-expand-lg navbar-light fixed-top" ref={ref}>
+    <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-white" ref={ref}>
       <div className="container">
         <Link className="navbar-brand" to="/">
           <img

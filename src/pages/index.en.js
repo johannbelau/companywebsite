@@ -6,8 +6,10 @@ import { Helmet } from 'react-helmet'
 import Navigation from '../components/navigation-int'
 import Footer from '../components/Footer'
 
+import Carousel from '../components/carousel'
+
 import Layout from '../components/layout'
-import HomeHero from '../components/hero'
+// import HomeHero from '../components/hero'
 import Services from '../components/services-icons'
 import OurCompany from '../components/our-company'
 import Contact from '../components/contact-us'
@@ -27,7 +29,8 @@ class RootIndex extends React.Component {
           <meta name="description" content={siteDescription} />
         </Helmet>
           <Navigation lang="en"/>
-          <HomeHero/>
+          <Carousel lang="en"/>
+          {/* <HomeHero/> */}
           <Services lang="en"/>
           <OurCompany lang="en"/>
           <LeftRight lang="en"/>
