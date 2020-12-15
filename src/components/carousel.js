@@ -56,7 +56,11 @@ export default function ImageCarousel(props) {
         const sliderItems = data.allContentfulHomeSlider.nodes
           .filter(i => i.node_locale === lang)[0].slide
         return (
-          <div className="position-relative slider overflow-hidden">
+          <div className="position-relative slider overflow-hidden mx-auto" 
+            style={{
+              maxWidth: "1440px"
+            }}
+          >
             {sliderItems.map((slide, idx) => {
               return (
                 <div
