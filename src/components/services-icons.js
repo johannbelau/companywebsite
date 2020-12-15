@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 
 export default function (props) {
   const {lang} = props
@@ -14,7 +14,7 @@ export default function (props) {
               node {
                 node_locale
                 ctaText
-                createdAt
+                ctaUrl
                 image {
                   file {
                     url
@@ -39,7 +39,8 @@ export default function (props) {
                 <div className="row">
                   { filtered.map((i,idx) => {
                     return (
-                      <div className="col-lg-4 col-md-4 col-sm-6 mt-5 mt-lg-0" key={`feature-${idx}`}>
+                      <div className="col-lg-3 col-sm-6 mt-5 mt-lg-0"
+                        key={`feature-${idx}`}>
                         <div className="card border-0">
                           <div className="card-body text-center">
                             <img src={i.node.image.file.url} 
@@ -47,12 +48,13 @@ export default function (props) {
                               style={{maxWidth: '120px'}}
                               alt={i.node.title} />
                             <p className="h5 font-weight-bold font-alt mb-3">{i.node.title}</p>
-                            {/* <p className="lead">
-                              Lorem ipsum dolor sit amet consectetur adipisicing.
-                            </p> */}
-                            <p>
-                              <a href="" className="btn btn-primary btn-rounded-lg ">{i.node.ctaText}</a>
-                            </p>
+                           
+                            { typeof i.node.ctaUrl === 'string' ? 
+                            <p className="mb-0">
+                              <Link 
+                                to={`${i.node.ctaUrl}`} 
+                                className="btn btn-primary btn-rounded-lg ">{i.node.ctaText}</Link>
+                            </p> : ''} 
                           </div>
                         </div>
                       </div>
