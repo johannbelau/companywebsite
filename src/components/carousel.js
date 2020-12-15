@@ -67,13 +67,14 @@ export default function ImageCarousel(props) {
                   className={idx === current ? `slide active` : `slide`}
                   key={`slide-${idx}`}
                 >
-                  { idx === current && <div>
+                  { idx === current && <div className="h-100 is-overlay position-absolute">
                     <h1 
-                      className="display-4 text-white mb-3 font-weight-bold font-alt
+                      className="display-4 px-6
+                      text-white mb-3 font-weight-bold font-alt
                       position-absolute slider-heading text-center w-100"
                       >{slide.text}</h1>
                     <Img
-                      className="w-100"
+                      className="w-100 h-100"
                       fluid={slide.image.fluid}
                       style={{
                         objectFit: "cover",
@@ -89,13 +90,13 @@ export default function ImageCarousel(props) {
             <div className="container position-absolute is-overlay">
               <button
                 onClick={prevSlide}
-                className="btn btn-lg btn-primary position-absolute slider-arrow slider-arrow--left px-3"
+                className="btn btn-sm btn-outline-light position-absolute slider-arrow slider-arrow--left px-2"
               >
                 <FontAwesomeIcon icon={faArrowLeft} />
               </button>
               <button
                 onClick={nextSlide}
-                className="btn btn-lg btn-primary position-absolute slider-arrow slider-arrow--right px-3"
+                className="btn btn-sm btn-outline-light position-absolute slider-arrow slider-arrow--right px-2"
               >
                 <FontAwesomeIcon icon={faArrowRight} />
               </button>

@@ -1,3 +1,10 @@
 .font-alt {
   font-family: 'Oswald', sans-serif;
 }
+
+
+@include media-breakpoint-down(sm) { 
+  .display-4 {
+    font-size: 2rem;
+  }
+}
