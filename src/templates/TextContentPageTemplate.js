@@ -54,8 +54,8 @@ export default function({data}) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    contentfulWebPageWithText(slug: { eq: $slug }) {
+  query($slug: String!, $lang: String!) {
+    contentfulWebPageWithText(slug: { eq: $slug },node_locale: {eq: $lang}) {
       heading
       bodyText {
         json
