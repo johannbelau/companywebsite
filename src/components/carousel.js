@@ -101,10 +101,10 @@ export default function ImageCarousel(props) {
                         {slide.ctaText ? (
                           <p className="text-center">
                             <Link
-                              to=""
+                              to={slide.ctaUrl}
                               className="btn btn-primary btn-lg btn-rounded-lg "
                             >
-                              Link
+                              {slide.ctaText}
                             </Link>
                           </p>
                         ) : (
