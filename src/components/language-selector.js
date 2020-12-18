@@ -2,8 +2,6 @@ import React from 'react'
 import { Link } from "gatsby";
 import { useLocation } from "@reach/router"
 
-import NavItems from './nav-items'
-
 export default function (props) {
 
   const {lang} = props
@@ -12,7 +10,6 @@ export default function (props) {
   if (lang === 'en') {
     return (
       <ul className="navbar-nav mr-0 justify-content-md-between main-nav flex-row">
-          {/* <NavItems lang='en' /> */}
         <li className="nav-item">
           <Link
             className="px-2 py-1 nav-link bg-primary text-white rounded-lg"
@@ -35,7 +32,6 @@ export default function (props) {
 
   return (
     <ul className="navbar-nav mr-0 justify-content-md-between main-nav flex-row">
-      {/* <NavItems lang='de' /> */}
       <li className="nav-item">
         <Link
           className="px-2 py-1 nav-link  text-primary  rounded-lg"
