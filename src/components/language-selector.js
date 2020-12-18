@@ -21,7 +21,7 @@ export default function (props) {
         <li className="nav-item">
           <Link
             className="px-2 py-1 nav-link  text-primary  rounded-lg "
-            to={location.pathname.replace("/" + lang + "/", "/")}
+            to={location.pathname.replace("/en/", "/")}
           >
             de
           </Link>

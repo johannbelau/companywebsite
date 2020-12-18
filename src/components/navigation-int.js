@@ -1,11 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
 
-import appData from "../../app.json";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-
 import PhoneAndEmail from './nav-company-contact'
 
 import LanguageSelector from "./language-selector";
