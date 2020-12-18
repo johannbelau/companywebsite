@@ -10,26 +10,33 @@ export default function (props) {
 
     <StaticQuery 
       query={graphql`
-        query ServicesQuery {
-          allContentfulService(sort: {order: ASC, fields: createdAt}) {
+        query CompanySection {
+          allContentfulSectionCompanyType {
             edges {
               node {
-                heading
                 node_locale
-                description {
-                  description
+                subheading
+                heading
+                sections {
+                  description {
+                    description
+                  }
+                  heading
                 }
               }
             }
           }
         }
+
       `}
     
 
     render={data => {
-      const services = data.allContentfulService.edges
+      const services = data.allContentfulSectionCompanyType.edges
 
-      const filtered = services.filter(i => i.node.node_locale === lang)
+      const filtered = services.filter(i => i.node.node_locale === lang)[0]
+
+      const sections = filtered.node.sections
 
       return (
         <>
@@ -40,21 +47,22 @@ export default function (props) {
         <div className="container">
           <div className="row pt-5">
             <div className="col-xl-3 col-lg-4 col-md-auto">
-              <div className="bg-primary shadow-lg rounded-lg d-flex h-100 p-4">
-                <h2 className="text-white h1 font-weight-normal align-self-center font-alt">
-                  {(lang === 'de') ? 'Unser Unternehmen' : 'Our Company'}
+              <div className="bg-primary text-white shadow-lg rounded-lg d-flex flex-column justify-content-center h-100 p-4">
+                <h2 className="h1 font-weight-normal align-self-center font-alt">
+                  {filtered.node.heading}
                 </h2>
+                {filtered.node.subheading ? <p>{filtered.node.subheading}</p> : ''}
               </div>
             </div>
             <div className="col-xl-9 col-lg-8 col-md-12">
               <div className="p-4">
                 <div className="row">
-                  { filtered.map((i,idx) => {
+                  { sections.map((i,idx) => {
                     return (
                       <div className="col-lg-6 col-md-6" key={`service-${idx}`}>
-                        <h3 className="mt-4 font-weight-bold font-alt">{i.node.heading}</h3>
+                        <h3 className="mt-4 font-weight-bold font-alt">{i.heading}</h3>
                         <p>
-                          {i.node.description.description}
+                          {i.description.description}
                         </p>
                       </div>
                     )
