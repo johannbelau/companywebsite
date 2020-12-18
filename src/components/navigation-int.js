@@ -6,6 +6,8 @@ import appData from "../../app.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
+import PhoneAndEmail from './nav-company-contact'
+
 import LanguageSelector from "./language-selector";
 import NavItems from "./nav-items";
 
@@ -116,33 +118,12 @@ export default (props) => {
             >
               
               <div className="row justify-content-lg-end w-100 no-gutters order-lg-1 order-2 mt-4 mt-lg-0">
-                <div className="col-auto">
-                  <Link
-                    to={`mailto:${appData.email}`}
-                    className="small mr-2">
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      className="text-primary mx-1"
-                    />
-                    {appData.email}
-                  </Link>
-                </div>
-                <div className="col-auto">
-                  <Link 
-                    to={`tel:${appData.phone}`}
-                    className="small mr-2">
-                    <FontAwesomeIcon icon={faPhone} className="text-primary mx-1" />
-                    {appData.phone}
-                  </Link>
-                </div>
+                <PhoneAndEmail />
               </div>
               
               <div className="d-flex flex-lg-row flex-column justify-content-lg-end w-100 order-lg-2 order-1">
                 <ul className="navbar-nav ml-lg-auto my-3 my-sm-0">
-                  
                   <NavItems lang={lang} />
-                  
-                  
                 </ul>
                 <LanguageSelector lang={lang} />
               </div>
