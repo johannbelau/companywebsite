@@ -43,10 +43,16 @@ export default function (props) {
                         key={`feature-${idx}`}>
                         <div className="card border-0">
                           <div className="card-body text-center">
-                            <img src={i.node.image.file.url} 
-                              className="w-50 mx-auto mb-3" 
-                              style={{maxWidth: '120px'}}
-                              alt={i.node.title} />
+                            <div 
+                              className="d-flex mb-3 flex-col mx-auto"
+                            style={{
+                              width: '100px',
+                              height: '100px'
+                            }}>
+                              <img src={i.node.image.file.url} 
+                                className="w-100 align-self-center" 
+                                alt={i.node.title} />
+                            </div>
                             <p className="h5 font-weight-bold font-alt mb-3">{i.node.title}</p>
                            
                             { typeof i.node.ctaUrl === 'string' ? 

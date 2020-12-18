@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import LanguageSelector from './language-selector'
+import NavItems from './nav-items'
 
 
 export default (props) => {
@@ -126,6 +127,7 @@ export default (props) => {
         <div className="d-lg-none d-flex w-100">
           <div className={isActive? "show collapse navbar-collapse" : "collapse navbar-collapse"} id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto text-uppercase mt-3 mt-sm-0">
+              <NavItems lang={lang} />
               <li>
                 <a className="small">
                   <FontAwesomeIcon
