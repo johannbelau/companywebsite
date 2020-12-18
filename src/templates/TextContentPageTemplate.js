@@ -17,11 +17,13 @@ export default function({data}) {
 
   const Bold = ({ children }) => <span className="font-weight-bold">{children}</span>
   const Text = ({ children }) => <p className="align-center">{children}</p>
+  const UL = ({ children }) => <ul className="">{children}</ul>
 
 
   const options = {
     renderNode: {
-      [BLOCKS.HEADING_2]: (node,children) => <Heading2>{children}</Heading2>
+      [BLOCKS.HEADING_2]: (node,children) => <Heading2>{children}</Heading2>,
+      [BLOCKS.UL_LIST]: (node, children) => <UL>{children}</UL>,
     },
     renderMark: {
       [MARKS.BOLD]: text => <Bold>{text}</Bold>,
