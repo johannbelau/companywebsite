@@ -34,7 +34,7 @@ export default function (props) {
         const filtered = features.filter(i => i.node.node_locale === lang)
         return (
           (
-            <section className="py-md-5 py-0">
+            <section className="pt-md-5 pb-md-0 py-0">
               <div className="container">
                 <div className="row">
                   { filtered.map((i,idx) => {
