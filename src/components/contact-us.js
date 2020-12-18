@@ -28,8 +28,7 @@ export default function (props) {
         
         const filtered = contact.filter(i => i.node.node_locale === lang)[0].node
         return (
-          <section className="">
-            {/* {JSON.stringify(contact)} */}
+          <section>
             <div className="container">
               <div className="row no-gutters justify-content-center mb-4 ">
                 <div className="col-lg-8 shadow-lg rounded-lg text-center mt-7 bg-white overflow-hidden">
