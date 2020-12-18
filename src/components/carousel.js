@@ -8,6 +8,8 @@ import { sliderItems } from "./slider-items";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
+import SVGIcon from './feedback-top-svg'
+
 export default function ImageCarousel(props) {
   const {lang} = props
   const [current, setCurrent] = useState(0);
@@ -100,6 +102,13 @@ export default function ImageCarousel(props) {
               >
                 <FontAwesomeIcon icon={faArrowRight} />
               </button>
+            </div>
+            <div className="position-absolute text-white w-100" 
+              style={{
+                bottom: '0px'
+              }}
+            >
+              <SVGIcon/>
             </div>
           </div>
         )
