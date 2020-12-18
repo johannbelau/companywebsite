@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { Link, StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import { sliderItems } from "./slider-items";
@@ -8,10 +8,10 @@ import { sliderItems } from "./slider-items";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import SVGIcon from './feedback-top-svg'
+import SVGIcon from "./feedback-top-svg";
 
 export default function ImageCarousel(props) {
-  const {lang} = props
+  const { lang } = props;
   const [current, setCurrent] = useState(0);
   const length = sliderItems.length;
 
@@ -30,8 +30,7 @@ export default function ImageCarousel(props) {
   }
 
   return (
-
-    <StaticQuery 
+    <StaticQuery
       query={graphql`
         query SliderQuery {
           allContentfulHomeSlider {
@@ -45,22 +44,23 @@ export default function ImageCarousel(props) {
                 }
                 text
                 node_locale
+                description
+                ctaText
+                ctaUrl
               }
             }
           }
         }
-
       `}
-    
-    
-      render={data => {
-        
-        const sliderItems = data.allContentfulHomeSlider.nodes
-          .filter(i => i.node_locale === lang)[0].slide
+      render={(data) => {
+        const sliderItems = data.allContentfulHomeSlider.nodes.filter(
+          (i) => i.node_locale === lang
+        )[0].slide;
         return (
-          <div className="position-relative slider overflow-hidden mx-auto" 
+          <div
+            className="position-relative slider overflow-hidden mx-auto"
             style={{
-              maxWidth: "1440px"
+              maxWidth: "1440px",
             }}
           >
             {sliderItems.map((slide, idx) => {
@@ -69,23 +69,58 @@ export default function ImageCarousel(props) {
                   className={idx === current ? `slide active` : `slide`}
                   key={`slide-${idx}`}
                 >
-                  { idx === current && <div className="h-100 is-overlay position-absolute">
-                    <h1 
-                      className="display-4 px-6
-                      text-white mb-3 font-weight-bold font-alt
-                      position-absolute slider-heading text-center w-100"
-                      >{slide.text}</h1>
-                    <Img
-                      className="w-100 h-100"
-                      fluid={slide.image.fluid}
-                      style={{
-                        objectFit: "cover",
-                        objectPosition: "center",
-                      }}
-                    />
-                    
-                  </div>
-                  }
+                  {idx === current && (
+                    <div className="h-100 is-overlay position-absolute">
+                      <div
+                        className="position-absolute px-5 w-100"
+                        style={{
+                          zIndex: 10,
+                          top: "50%",
+                          transform: "translateY(-50%)",
+                        }}
+                      >
+                        <h1
+                          className="display-4
+                        text-white mb-3 font-weight-bold font-alt
+                         slider-heading text-center w-100"
+                        >
+                          {slide.text}
+                        </h1>
+
+                        {slide.description ? (
+                          <p
+                            className="text-center text-white mx-auto"
+                            style={{ maxWidth: "640px" }}
+                          >
+                            {slide.description}
+                          </p>
+                        ) : (
+                          ""
+                        )}
+
+                        {slide.ctaText ? (
+                          <p className="text-center">
+                            <Link
+                              to=""
+                              className="btn btn-primary btn-lg btn-rounded-lg "
+                            >
+                              Link
+                            </Link>
+                          </p>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                      <Img
+                        className="w-100 h-100"
+                        fluid={slide.image.fluid}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: "center",
+                        }}
+                      />
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -103,15 +138,16 @@ export default function ImageCarousel(props) {
                 <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
-            <div className="position-absolute text-white w-100" 
+            <div
+              className="position-absolute text-white w-100"
               style={{
-                bottom: '0px'
+                bottom: "0px",
               }}
             >
-              <SVGIcon/>
+              <SVGIcon />
             </div>
           </div>
-        )
+        );
       }}
     />
   );
