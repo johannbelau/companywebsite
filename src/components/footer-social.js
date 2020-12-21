@@ -34,7 +34,7 @@ export default function (props) {
             {socialItems.map((i,idx) => {
               if (i.node.name === 'xing') {
                 return (
-                  <a href={i.node.url} className="social-link">
+                  <a href={i.node.url} className="social-link" key={`social-item-${idx}`}>
                     <FontAwesomeIcon
                       icon={faXing}
                       size="lg"
@@ -44,7 +44,7 @@ export default function (props) {
                 )
               }
               return (
-                <a href={i.node.url} className="social-link">
+                <a href={i.node.url} className="social-link" key={`social-item-${idx}`}>
                   <FontAwesomeIcon
                     icon={faLinkedin}
                     size="lg"
