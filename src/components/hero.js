@@ -3,7 +3,8 @@ import HeroSVG from './hero-bottom-svg'
 
 import { Link, StaticQuery, graphql } from 'gatsby'
 
-export default function () {
+export default function (props) {
+
   return (
     <>
     
@@ -13,14 +14,15 @@ export default function () {
           <div className="col-lg-6 text-center align-self-center">
             
             <h1 className="display-4 text-primary mb-3 mt-5 mt-lg-0 font-weight-bold font-alt">
-              Lorem ipsum
+              {props.heading}
             </h1>
             <p className="lead">
-              Lorem Ipsum
+              {props.subheading}
             </p>
+            {props.ctaText?
             <p className="">
-              <Link to="/" className="btn btn-outline-primary btn-lg">Lorem Ipsum</Link>
-            </p>
+              <Link to={props.ctaUrl} className="btn btn-outline-primary btn-lg">{props.ctaText}</Link>
+            </p> : ''}
             
           </div>
         </div>
