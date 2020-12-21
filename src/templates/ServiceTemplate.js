@@ -37,8 +37,6 @@ export default function ({data}) {
         // ctaText="Click"
         // ctaUrl="/"
       />
-
-
           <section className="">
             <div className="container">
                 {pageRows.map((i, idx) => {
@@ -85,8 +83,6 @@ export default function ({data}) {
             </div>
           </section>
         
-    
-      {/* <Footer lang={page.node_locale} /> */}
       <Footer lang={lang} />
     </Layout>
   )

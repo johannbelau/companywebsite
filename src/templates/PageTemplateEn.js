@@ -32,7 +32,8 @@ export default function ({data}) {
     pageFeatureSection,
     pageCompanySection,
     pageRows,
-    pageCtaSection
+    pageCtaSection,
+    node_locale
   } = page
 
 
@@ -44,7 +45,7 @@ export default function ({data}) {
       </Helmet>
 
       <Navigation lang={lang} />
-
+      {JSON.stringify(lang)}
       { pageHero ?<Hero items={pageHero} lang={lang}/> :  <PageCarousel items={pageSlider} lang={lang}/>}
       
       { pageFeatureSection ? <Features  items={pageFeatureSection} lang={lang}/> : ''}
@@ -62,8 +63,8 @@ export default function ({data}) {
 
 
 export const query = graphql`
-  query($slug: String!, $lang: String!) {
-    contentfulLandingPage(slug: { eq: $slug },node_locale: {eq: $lang}) {
+  query($slug: String!) {
+    contentfulLandingPage(slug: { eq: $slug }) {
       node_locale
       slug
       pageMetaTitle

@@ -20,6 +20,14 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allContentfulLandingPage {
+        edges {
+          node {
+            slug
+            node_locale
+          }
+        }
+      }
     }
   `)
   result.data.allContentfulWebPageWithText.edges.forEach(({ node }) => {
@@ -86,6 +94,48 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `${lang}/${node.slug}`,
       component: path.resolve(`./src/templates/ServiceTemplate.js`),
+      context: {
+        // Data passed to context is available
+        lang: node.node_locale,
+        slug: node.slug,
+      },
+    })
+  })
+
+  result.data.allContentfulLandingPage.edges.forEach(({ node }) => {
+    let lang;
+    let template;
+    if (node.node_locale === 'de') {
+      template = `./src/templates/PageTemplate.js`;
+      lang = ''
+    } else {
+      lang = 'en'
+      template = `./src/templates/PageTemplateEn.js`;
+    }
+    createPage({
+      path: `${lang}${node.slug}`,
+      component: path.resolve(template),
+      context: {
+        // Data passed to context is available
+        lang: node.node_locale,
+        slug: node.slug,
+      },
+    })
+  })
+
+  result.data.allContentfulLandingPage.edges.forEach(({ node }) => {
+    let lang;
+    let template;
+    if (node.node_locale === 'de') {
+      template = `./src/templates/PageTemplate.js`;
+      lang = ''
+    } else {
+      lang = 'en'
+      template = `./src/templates/PageTemplateEn.js`;
+    }
+    createPage({
+      path: `${lang}${node.slug}`,
+      component: path.resolve(template),
       context: {
         // Data passed to context is available
         lang: node.node_locale,
