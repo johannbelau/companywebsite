@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Link, StaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +9,7 @@ import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import SVGIcon from "./feedback-top-svg";
 
 export default function ImageCarousel(props) {
-  const { lang, items } = props;
+  const { items } = props;
   const sliderItems = items
   const [current, setCurrent] = useState(0);
   const length = sliderItems.length;

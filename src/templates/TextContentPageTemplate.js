@@ -16,7 +16,7 @@ export default function({data}) {
   const Heading2 = ({ children }) => <h2 className="font-alt h3 mt-4 mb-3">{children}</h2>;
 
   const Bold = ({ children }) => <span className="font-weight-bold">{children}</span>
-  const Text = ({ children }) => <p className="align-center">{children}</p>
+  
   const UL = ({ children }) => <ul className="">{children}</ul>
 
 

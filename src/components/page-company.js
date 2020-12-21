@@ -1,12 +1,10 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
 
 import SVGTop from "./training-top-svg";
 import SVGBottom from "./training-bottom-svg";
 
 export default function (props) {
-  const { lang, items } = props;
-  const services = items;
+  const { items } = props;
   
   const sections = items.sections;
 

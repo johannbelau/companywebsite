@@ -104,13 +104,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allContentfulLandingPage.edges.forEach(({ node }) => {
     let lang;
-    let template;
+    let template = `./src/templates/PageTemplate.js`;
     if (node.node_locale === 'de') {
-      template = `./src/templates/PageTemplate.js`;
       lang = ''
     } else {
       lang = 'en'
-      template = `./src/templates/PageTemplateEn.js`;
     }
     createPage({
       path: `${lang}${node.slug}`,
@@ -125,13 +123,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allContentfulLandingPage.edges.forEach(({ node }) => {
     let lang;
-    let template;
+    let template = `./src/templates/PageTemplate.js`;
     if (node.node_locale === 'de') {
-      template = `./src/templates/PageTemplate.js`;
       lang = ''
     } else {
       lang = 'en'
-      template = `./src/templates/PageTemplateEn.js`;
     }
     createPage({
       path: `${lang}${node.slug}`,

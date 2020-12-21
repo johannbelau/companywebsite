@@ -1,9 +1,7 @@
 import React from "react";
 
-import { StaticQuery, graphql } from "gatsby";
-
 export default function (props) {
-  const { lang, items } = props;
+  const { items } = props;
 
   const contact = items;
 

@@ -1,8 +1,8 @@
 import React from "react";
-import { Link, StaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 
 export default function (props) {
-  const { lang, items } = props;
+  const { items } = props;
   const features = items;
 
   // const filtered = features.filter((i) => i.node_locale === lang);
@@ -10,7 +10,7 @@ export default function (props) {
     <section className="pt-md-5 pb-md-0 py-0">
       <div className="container">
         <div className="row">
-          {items.map((i, idx) => {
+          {features.map((i, idx) => {
             return (
               <div
                 className="col-lg-3 col-sm-6 mt-5 mt-lg-0"

@@ -33,8 +33,7 @@ export default function (props) {
 
       render={ data => {
         const allColumns = data.allContentfulFooter.edges.filter(i => i.node.node_locale === lang)[0].node.footerRow
-        // const currentRows = socialItems
-        const Heading2 = ({ children }) => <h2 className="font-alt h3 mt-4 mb-3">{children}</h2>;
+        
         const Bold = ({ children }) => <span className="bold">{children}</span>
         const Text = ({ children }) => <p className="mb-0">{children}</p>
         const UL = ({ children }) => <ul className="list-unstyled">{children}</ul>

@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout'
 
-import Img from "gatsby-image";
-
 import Navigation from '../components/navigation-int'
 import Footer from '../components/Footer'
 
@@ -15,9 +13,6 @@ import Features from '../components/page-features'
 import OurCompany from '../components/page-company'
 import PageRows from '../components/page-rows'
 import CTA from '../components/page-cta-section'
-
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export default function ({data}) {
 

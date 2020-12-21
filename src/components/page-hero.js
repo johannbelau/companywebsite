@@ -1,11 +1,11 @@
 import React from 'react'
 import HeroSVG from './hero-bottom-svg'
 
-import { Link, StaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 
 export default function (props) {
 
-  const { lang, items } = props;
+  const { items } = props;
 
   
 

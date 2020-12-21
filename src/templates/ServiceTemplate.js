@@ -11,7 +11,6 @@ import Footer from '../components/Footer'
 
 import Hero from '../components/hero'
 
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export default function ({data}) {
