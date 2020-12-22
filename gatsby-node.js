@@ -28,6 +28,14 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allContentfulSmallPage {
+        edges {
+          node {
+            slug
+            node_locale
+          }
+        }
+      }
     }
   `)
   result.data.allContentfulWebPageWithText.edges.forEach(({ node }) => {
@@ -139,4 +147,44 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+  
+
+  result.data.allContentfulSmallPage.edges.forEach(({ node }) => {
+    let lang;
+    let template = `./src/templates/SmallPage.js`;
+    if (node.node_locale === 'de') {
+      lang = ''
+    } else {
+      lang = 'en'
+    }
+    createPage({
+      path: `${lang}${node.slug}`,
+      component: path.resolve(template),
+      context: {
+        // Data passed to context is available
+        lang: node.node_locale,
+        slug: node.slug,
+      },
+    })
+  })
+
+  result.data.allContentfulSmallPage.edges.forEach(({ node }) => {
+    let lang;
+    let template = `./src/templates/SmallPage.js`;
+    if (node.node_locale === 'de') {
+      lang = ''
+    } else {
+      lang = 'en'
+    }
+    createPage({
+      path: `${lang}${node.slug}`,
+      component: path.resolve(template),
+      context: {
+        // Data passed to context is available
+        lang: node.node_locale,
+        slug: node.slug,
+      },
+    })
+  })
+
 }

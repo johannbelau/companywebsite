@@ -7,7 +7,7 @@ export default function (props) {
 
   
   return (
-    <section>
+    <section id="contact">
       <div className="container">
         <div className="row no-gutters justify-content-center mb-4 ">
           <div className="col-lg-8 shadow-lg rounded-lg text-center mt-7 bg-white overflow-hidden">

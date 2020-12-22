@@ -4,84 +4,50 @@ import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout'
 
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 
 import Navigation from '../components/navigation-int'
 import Footer from '../components/Footer'
 
-import Hero from '../components/hero'
+import HeroSmall from '../components/page-hero-sm'
+import LogoSection from '../components/page-logo-section'
+import PageRows from '../components/page-rows'
+import CTA from '../components/page-cta-section'
 
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+
+// import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export default function ({data}) {
 
   const lang = data.contentfulServicePage.node_locale
   const page = data.contentfulServicePage
-  const pageHero = data.contentfulServicePage.pageHeroSection
-  const pageRows = data.contentfulServicePage.pageRowSections
+  const {
+    pageMetaTitle,
+    pageMetaDescription,
+    pageHeroSection,
+    pageLogoSection,
+    pageRowSections,
+    pageCtaSection
+  } = page
 
   return (
     <Layout>
       <Helmet>
-        <title>{page.pageMetaTitle}</title>
-        <meta name="description" content={page.pageMetaDescription} />
+        <title>{pageMetaTitle}</title>
+        <meta name="description" content={pageMetaDescription} />
       </Helmet>
 
-      {/* <Navigation lang={page.node_locale} /> */}
       <Navigation lang={lang} />
 
-      <Hero
-        heading={pageHero.heading}
-        subheading={pageHero.subheading}
-        // ctaText="Click"
-        // ctaUrl="/"
-      />
-          <section className="">
-            <div className="container">
-                {pageRows.map((i, idx) => {
-                  if (idx % 2 === 0) {
-                    return (
-                      
-                      <div className="row d-flex my-7" key={`row-${idx}`}>
-                      <div className="col-lg-6 d-flex order-lg-2">
-                        <Img 
-                          className="img-fluid mx-auto d-block align-self-center"
-                          fixed={i.image.fixed}
-                          alt={i.heading} />
-                        </div>
-                        <div className="col-lg-6 order-lg-1">
-                          <div className="p-4">
-                            <h3 className="mt-4 font-weight-bold font-alt">{i.heading}</h3>
-                            <div>
-                              {documentToReactComponents(i.bodyText.json)}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  }
-                  return (
-                    <div className="row d-flex my-7" key={`row-${idx}`}>
-                      <div className="col-lg-6 d-flex">
-                        <Img 
-                          className="img-fluid mx-auto d-block align-self-center"
-                          fixed={i.image.fixed}
-                          alt={i.heading} />
-                        </div>
-                        <div className="col-lg-6">
-                          <div className="p-4">
-                            <h3 className="mt-4 font-weight-bold font-alt">{i.heading}</h3>
-                            <div>
-                              {documentToReactComponents(i.bodyText.json)}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  );
-                })}
-            </div>
-          </section>
-        
+
+      { pageHeroSection ?<HeroSmall items={pageHeroSection} lang={lang}/> :  ''}
+
+      { pageLogoSection ? <LogoSection items={pageLogoSection} lang={lang}/> : ''}
+
+      { pageRowSections ? <PageRows items={pageRowSections} lang={lang}/> : ''}
+
+      { pageCtaSection ? <CTA items={pageCtaSection} lang={lang}/> : ''}
+  
       <Footer lang={lang} />
     </Layout>
   )
@@ -95,6 +61,10 @@ export const query = graphql`
       pageMetaDescription
       pageMetaTitle
       slug
+      pageHeroSection {
+        heading
+        subheading
+      }
       pageRowSections {
         bodyText {
           json
@@ -107,7 +77,9 @@ export const query = graphql`
           title
         }
       }
-      pageHeroSection {
+      pageCtaSection {
+        ctaText
+        ctaUrl
         heading
         subheading
       }
