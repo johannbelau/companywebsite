@@ -35,6 +35,9 @@ export default function ({data}) {
       <Helmet>
         <title>{pageMetaTitle}</title>
         <meta name="description" content={pageMetaDescription} />
+        <meta property="og:title" content={pageMetaTitle}/>
+        <meta property="og:description" content={pageMetaDescription}/>
+        <meta property="og:image" content="/img/logo/4rivers_logo_circle@3x.png"/>
       </Helmet>
 
       <Navigation lang={lang} />
