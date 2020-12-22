@@ -158,7 +158,7 @@ exports.createPages = async ({ graphql, actions }) => {
       lang = 'en'
     }
     createPage({
-      path: `${lang}${node.slug}`,
+      path: `${lang}/${node.slug}`,
       component: path.resolve(template),
       context: {
         // Data passed to context is available
@@ -177,7 +177,7 @@ exports.createPages = async ({ graphql, actions }) => {
       lang = 'en'
     }
     createPage({
-      path: `${lang}${node.slug}`,
+      path: `${lang}/${node.slug}`,
       component: path.resolve(template),
       context: {
         // Data passed to context is available

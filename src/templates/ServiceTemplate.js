@@ -42,7 +42,7 @@ export default function ({data}) {
 
       { pageHeroSection ?<HeroSmall items={pageHeroSection} lang={lang}/> :  ''}
 
-      { pageLogoSection ? <LogoSection items={pageLogoSection} lang={lang}/> : ''}
+      { pageLogoSection ? <LogoSection items={pageLogoSection[0]} lang={lang}/> : ''}
 
       { pageRowSections ? <PageRows items={pageRowSections} lang={lang}/> : ''}
 
@@ -82,6 +82,14 @@ export const query = graphql`
         ctaUrl
         heading
         subheading
+      }
+      pageLogoSection {
+        heading
+        images {
+          fixed(width: 220) {
+            ...GatsbyContentfulFixed
+          }
+        }
       }
     }
   }

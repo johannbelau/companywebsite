@@ -13,7 +13,7 @@ export default function (props) {
       <section className="text-light">
         <SVGTop />
       </section>
-      <section className="bg-light">
+      <section className="bg-light" id="services">
         <div className="container">
           <div className="row pt-5">
             <div className="col-xl-3 col-lg-4 col-md-auto">

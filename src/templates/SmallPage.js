@@ -77,10 +77,7 @@ export const query = graphql`
           heading
           images {
             fixed(width: 220) {
-              ...GatsbyContentfulFixed_tracedSVG
-            }
-            fluid {
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFixed
             }
           }
         }

@@ -35,7 +35,7 @@ export default function (props) {
               return (
                 <li className="nav-item" key={`nav-item-${idx}`}>
                   <Link 
-                    to={i.url}
+                    to={`/${i.url}`}
                     className="px-2 py-1 nav-link text-primary font-weight-bold"
                   >
                     {i.name}
