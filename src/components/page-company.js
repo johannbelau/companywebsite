@@ -10,10 +10,10 @@ export default function (props) {
 
   return (
     <>
-      <section className="text-light">
+      <section className="text-light" id="services">
         <SVGTop />
       </section>
-      <section className="bg-light" id="services">
+      <section className="bg-light">
         <div className="container">
           <div className="row pt-5">
             <div className="col-xl-3 col-lg-4 col-md-auto">
