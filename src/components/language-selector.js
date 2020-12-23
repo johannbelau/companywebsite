@@ -9,7 +9,11 @@ export default function (props) {
 
   if (lang === 'de') {
     return (
-      <ul className="navbar-nav mr-0 justify-content-md-between main-nav flex-row">
+      <ul className="navbar-nav mr-0 justify-content-md-end main-nav flex-row"
+        style={{
+          width: '160px'
+        }}
+        >
         <li className="nav-item">
           <Link
             className="px-2 py-1 nav-link  text-primary  rounded-lg"
@@ -31,7 +35,11 @@ export default function (props) {
   }
 
   return (
-    <ul className="navbar-nav mr-0 justify-content-md-between main-nav flex-row">
+    <ul className="navbar-nav mr-0 justify-content-md-end main-nav flex-row"
+      style={{
+        width: '160px'
+      }}
+    >
       <li className="nav-item">
         <Link
           className="px-2 py-1 nav-link bg-primary text-white rounded-lg"

@@ -117,7 +117,7 @@ export default (props) => {
               </div>
               
               <div className="d-flex flex-lg-row flex-column justify-content-lg-end w-100 order-lg-2 order-1">
-                <ul className="navbar-nav ml-lg-auto my-3 my-sm-0">
+                <ul className="navbar-nav my-3 my-sm-0 mx-auto">
                   <NavItems lang={lang} />
                 </ul>
                 <LanguageSelector lang={lang} />
