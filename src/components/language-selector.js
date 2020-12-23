@@ -12,7 +12,6 @@ export default function (props) {
       <ul className="navbar-nav mr-0 justify-content-md-between main-nav flex-row">
         <li className="nav-item">
           <Link
-            disabled={true}
             className="px-2 py-1 nav-link  text-primary  rounded-lg"
             to={location.pathname.replace("/de/", "/")}
           >

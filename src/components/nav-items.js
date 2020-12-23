@@ -6,7 +6,7 @@ import { useLocation } from "@reach/router"
 
 function getPageSlug (lang) {
   if (lang === 'en') {
-    return ''
+    return '/'
   }
   return '/de/'
 }
