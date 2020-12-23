@@ -1,5 +1,12 @@
 const path = require(`path`);
 
+function getPageSlug (lang) {
+  if (lang === 'en') {
+    return ''
+  }
+  return '/de'
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
@@ -39,14 +46,9 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
   result.data.allContentfulWebPageWithText.edges.forEach(({ node }) => {
-    let lang;
-    if (node.node_locale === 'de') {
-      lang = ''
-    } else {
-      lang = 'en'
-    }
+    
     createPage({
-      path: `${lang}/${node.slug}`,
+      path: `${getPageSlug(node.node_locale)}${node.slug}`,
       component: path.resolve(`./src/templates/TextContentPageTemplate.js`),
       context: {
         // Data passed to context is available
@@ -57,14 +59,9 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   result.data.allContentfulWebPageWithText.edges.forEach(({ node }) => {
-    let lang;
-    if (node.node_locale === 'de') {
-      lang = ''
-    } else {
-      lang = 'en'
-    }
+   
     createPage({
-      path: `${lang}/${node.slug}`,
+      path: `${getPageSlug(node.node_locale)}${node.slug}`,
       component: path.resolve(`./src/templates/TextContentPageTemplate.js`),
       context: {
         // Data passed to context is available
@@ -75,14 +72,9 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   result.data.allContentfulServicePage.edges.forEach(({ node }) => {
-    let lang;
-    if (node.node_locale === 'de') {
-      lang = ''
-    } else {
-      lang = 'en'
-    }
+    
     createPage({
-      path: `${lang}/${node.slug}`,
+      path: `${getPageSlug(node.node_locale)}${node.slug}`,
       component: path.resolve(`./src/templates/ServiceTemplate.js`),
       context: {
         // Data passed to context is available
@@ -93,14 +85,9 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   result.data.allContentfulServicePage.edges.forEach(({ node }) => {
-    let lang;
-    if (node.node_locale === 'de') {
-      lang = ''
-    } else {
-      lang = 'en'
-    }
+    
     createPage({
-      path: `${lang}/${node.slug}`,
+      path: `${getPageSlug(node.node_locale)}${node.slug}`,
       component: path.resolve(`./src/templates/ServiceTemplate.js`),
       context: {
         // Data passed to context is available
@@ -111,15 +98,11 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   result.data.allContentfulLandingPage.edges.forEach(({ node }) => {
-    let lang;
+    
     let template = `./src/templates/PageTemplate.js`;
-    if (node.node_locale === 'de') {
-      lang = ''
-    } else {
-      lang = 'en'
-    }
+    
     createPage({
-      path: `${lang}${node.slug}`,
+      path: `${getPageSlug(node.node_locale)}${node.slug}`,
       component: path.resolve(template),
       context: {
         // Data passed to context is available
@@ -130,15 +113,9 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   result.data.allContentfulLandingPage.edges.forEach(({ node }) => {
-    let lang;
     let template = `./src/templates/PageTemplate.js`;
-    if (node.node_locale === 'de') {
-      lang = ''
-    } else {
-      lang = 'en'
-    }
     createPage({
-      path: `${lang}${node.slug}`,
+      path: `${getPageSlug(node.node_locale)}${node.slug}`,
       component: path.resolve(template),
       context: {
         // Data passed to context is available
@@ -150,15 +127,11 @@ exports.createPages = async ({ graphql, actions }) => {
   
 
   result.data.allContentfulSmallPage.edges.forEach(({ node }) => {
-    let lang;
+    
     let template = `./src/templates/SmallPage.js`;
-    if (node.node_locale === 'de') {
-      lang = ''
-    } else {
-      lang = 'en'
-    }
+    
     createPage({
-      path: `${lang}/${node.slug}`,
+      path: `${getPageSlug(node.node_locale)}${node.slug}`,
       component: path.resolve(template),
       context: {
         // Data passed to context is available
@@ -169,15 +142,11 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   result.data.allContentfulSmallPage.edges.forEach(({ node }) => {
-    let lang;
+    
     let template = `./src/templates/SmallPage.js`;
-    if (node.node_locale === 'de') {
-      lang = ''
-    } else {
-      lang = 'en'
-    }
+   
     createPage({
-      path: `${lang}/${node.slug}`,
+      path: `${getPageSlug(node.node_locale)}${node.slug}`,
       component: path.resolve(template),
       context: {
         // Data passed to context is available

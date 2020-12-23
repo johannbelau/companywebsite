@@ -2,8 +2,20 @@ import React from 'react'
 
 import { Link, StaticQuery, graphql } from 'gatsby'
 
+import { useLocation } from "@reach/router"
+
+function getPageSlug (lang) {
+  if (lang === 'en') {
+    return ''
+  }
+  return '/de/'
+}
+
 export default function (props) {
+  const location = useLocation()
   const {lang} = props
+
+
 
   return (
     <StaticQuery 
@@ -35,7 +47,7 @@ export default function (props) {
               return (
                 <li className="nav-item" key={`nav-item-${idx}`}>
                   <Link 
-                    to={`/${i.url === '/' ? '' : i.url}`}
+                    to={`${getPageSlug(lang)}${i.url === '/' ? '' : i.url}`}
                     className="px-2 py-1 nav-link text-primary font-weight-bold"
                   >
                     {i.name}
