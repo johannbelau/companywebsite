@@ -67,7 +67,10 @@ export default (props) => {
       >
        
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/"
+            style={{
+              width: '160px'
+            }}>
             <img
               src="/img/4Rivers_Logo.svg"
               width="160"
