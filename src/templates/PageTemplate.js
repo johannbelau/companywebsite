@@ -85,7 +85,7 @@ export const query = graphql`
           json
         }
         image {
-          fixed {
+          fixed(width: 320) {
             ...GatsbyContentfulFixed
           }
         }
