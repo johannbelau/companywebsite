@@ -67,6 +67,8 @@ export const query = graphql`
       pageMetaTitle
       pageMetaDescription
       pageSlider {
+        backgroundColor
+        useBgColorForSlide
         image {
           fluid {
             ...GatsbyContentfulFluid
