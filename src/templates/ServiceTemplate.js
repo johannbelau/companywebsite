@@ -74,7 +74,7 @@ export const query = graphql`
         }
         heading
         image {
-          fixed {
+          fixed(width: 320) {
             ...GatsbyContentfulFixed
           }
           title
